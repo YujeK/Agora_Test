@@ -8,7 +8,6 @@ public class MaterialSwap : MonoBehaviour
 
     private Renderer _renderer;
     private int _i;
-    private bool canInteract;
 
     private void Start()
     {
@@ -17,29 +16,7 @@ public class MaterialSwap : MonoBehaviour
         _renderer.sharedMaterial = _material[0];
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            canInteract = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            canInteract = false;
-        }
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F) && canInteract)
-            SetNextMaterial();
-    }
-
-    private void SetNextMaterial()
+    public void SetNextMaterial()
     {
         _i++;
         if (_i >= _material.Length)
