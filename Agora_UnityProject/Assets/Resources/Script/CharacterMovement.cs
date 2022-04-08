@@ -43,12 +43,15 @@ public class CharacterMovement : MonoBehaviour
         if (Input.GetKeyDown(_jumpKey) && _isGrounded)
         {
             _velocity.y = Mathf.Sqrt(_jumpHeight * -2f * _gravity);
+            _animator.SetBool("IsJumping", true);
         }
     }
 
     private void GroundCheck()
     {
         _isGrounded = Physics.CheckSphere(_groundCheck.position, _groundDistance, _groundMask);
+        if (_isGrounded)
+            _animator.SetBool("IsJumping", false);
         if (_isGrounded && _velocity.y < 0)
         {
             _velocity.y = -2f;

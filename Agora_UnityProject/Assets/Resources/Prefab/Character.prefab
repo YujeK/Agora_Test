@@ -1784,12 +1784,11 @@ MonoBehaviour:
   _groundCheck: {fileID: 1565050661}
   _speed: 5
   _gravity: -10
-  _groundDistance: 0.4
   _groundMask:
     serializedVersion: 2
     m_Bits: 64
   _jumpKey: 32
-  _jumpHeight: 1
+  _jumpHeight: 2
 --- !u!1 &4749476573261587989
 GameObject:
   m_ObjectHideFlags: 0
