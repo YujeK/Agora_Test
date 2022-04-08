@@ -16713,6 +16713,8 @@ MonoBehaviour:
   _characterModel: {fileID: 1986831056}
   _mouseSensitivity: 100
   _lockCursor: 1
+  _minYangle: -50
+  _maxYangle: 50
 --- !u!124 &474141797
 Behaviour:
   m_ObjectHideFlags: 0
@@ -22891,6 +22893,8 @@ MonoBehaviour:
   _characterModel: {fileID: 1986831056}
   _mouseSensitivity: 100
   _lockCursor: 1
+  _minYangle: -90
+  _maxYangle: 90
 --- !u!20 &671013934
 Camera:
   m_ObjectHideFlags: 0
