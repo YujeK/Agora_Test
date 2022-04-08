@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
+    private Animator _animator;
     [SerializeField] private Transform _groundCheck;
 
     private CharacterController _controller;
@@ -26,6 +27,7 @@ public class CharacterMovement : MonoBehaviour
     private void Awake()
     {
         _controller = GetComponent<CharacterController>();
+        _animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -65,5 +67,12 @@ public class CharacterMovement : MonoBehaviour
         float z = Input.GetAxis("Vertical");
         Vector3 direction = transform.right * x + transform.forward * z;
         _controller.Move(direction * _speed * Time.deltaTime);
+
+
+        // Animation
+        float velocityZ = Vector3.Dot(direction.normalized, transform.forward);
+        float velocityX = Vector3.Dot(direction.normalized, transform.right);
+        _animator.SetFloat("VelocityZ", velocityZ, 0.1f, Time.deltaTime);
+        _animator.SetFloat("VelocityX", velocityX, 0.1f, Time.deltaTime);
     }
 }

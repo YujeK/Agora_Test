@@ -12,6 +12,12 @@ public class Interactable : MonoBehaviour
     public UnityEvent OnEnterEvent;
     public UnityEvent OnExitEvent;
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F) && canInteract)
+            OnInteract();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
@@ -28,12 +34,6 @@ public class Interactable : MonoBehaviour
             OnExit();
             canInteract = false;
         }
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F) && canInteract)
-            OnInteract();
     }
 
     private void OnInteract()
