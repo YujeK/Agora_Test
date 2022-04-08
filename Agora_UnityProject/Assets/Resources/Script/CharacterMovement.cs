@@ -15,7 +15,7 @@ public class CharacterMovement : MonoBehaviour
     [Header("Character Movement Settings")]
     public float _speed = 5f;
     public float _gravity = -10f;
-    public float _groundDistance = 0.4f;
+    private float _groundDistance = 0.4f;
     public LayerMask _groundMask;
     private Vector3 _velocity;
 
