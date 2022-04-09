@@ -31,13 +31,16 @@ public class MouseLook : MonoBehaviour
     // Rotate the Camera and the character based on Mouse Inputs
     private void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * _mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * _mouseSensitivity * Time.deltaTime;
+        if (Cursor.lockState == CursorLockMode.Locked)
+        {
+            float mouseX = Input.GetAxis("Mouse X") * _mouseSensitivity * Time.deltaTime;
+            float mouseY = Input.GetAxis("Mouse Y") * _mouseSensitivity * Time.deltaTime;
 
-        _xRotation -= mouseY;
-        _xRotation = Mathf.Clamp(_xRotation, _maxYangle, _minYangle);
+            _xRotation -= mouseY;
+            _xRotation = Mathf.Clamp(_xRotation, _maxYangle, _minYangle);
 
-        transform.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
-        _characterModel.Rotate(Vector3.up * mouseX);
+            transform.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
+            _characterModel.Rotate(Vector3.up * mouseX);
+        }
     }
 }
