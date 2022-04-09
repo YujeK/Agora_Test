@@ -218,7 +218,8 @@ GameObject:
   - component: {fileID: 5011365844255736745}
   - component: {fileID: 5011365844255736747}
   - component: {fileID: 3470101498858026946}
-  - component: {fileID: 6154644219868836412}
+  - component: {fileID: 742909848}
+  - component: {fileID: 742909849}
   m_Layer: 0
   m_Name: MagicCrate
   m_TagString: MagicCrate
@@ -309,7 +310,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &5011365844255736747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,6 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db1671779f2b6240a8b04586cc7d35e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canInteract: 0
   OnInteractEvent:
     m_PersistentCalls:
       m_Calls:
@@ -386,8 +388,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!135 &6154644219868836412
-SphereCollider:
+--- !u!65 &742909848
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -397,8 +399,21 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.4982496
+  m_Size: {x: 0.9964992, y: 0.99649537, z: 0.9964957}
   m_Center: {x: 0.0000001937151, y: 0, z: -0.000000014901161}
+--- !u!114 &742909849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5011722948730745510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 867647e4a8f84cd46a32a7a92ffeb236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dest: {fileID: 0}
 --- !u!1 &6590152195820162114
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,7 +456,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
+  m_Size: {x: 3, y: 2, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6805372593362922720
 GameObject:

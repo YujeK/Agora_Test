@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TutoNPC_Phase1
   m_EditorClassIdentifier: 
   _lines:
-  - Parler avec 'F'
+  - Parler
   - Bienvenue dans ce test technique pour The Agora
   - "Vu que je m'ennuie je te propose de jouer \xE0 un jeu avec moi"
   - On se retrouve en haut !

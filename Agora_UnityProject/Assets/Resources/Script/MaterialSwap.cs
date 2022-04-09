@@ -15,7 +15,7 @@ public class MaterialSwap : MonoBehaviour
     {
         _renderer = GetComponent<Renderer>();
         _renderer.enabled = true;
-        _renderer.sharedMaterial = _material[0];
+        //    _renderer.sharedMaterial = _material[0];
     }
 
     public void SetNextMaterial()
