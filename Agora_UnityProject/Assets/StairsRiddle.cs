@@ -5,10 +5,11 @@ using DG.Tweening;
 
 public class StairsRiddle : MonoBehaviour
 {
+    int _i;
     [SerializeField] private GameObject[] stairs;
 
-    public void Start()
+    public void TriggerStair(int id, float endValue, float duration)
     {
-        stairs[0].transform.DOMoveY(5, 5);
+        stairs[id].transform.DOMoveY(endValue, duration);
     }
 }

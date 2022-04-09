@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MaterialSwap : MonoBehaviour
 {
+    public int _materialID = 0;
     [SerializeField] private Material[] _material;
 
     private Renderer _renderer;
@@ -32,8 +33,13 @@ public class MaterialSwap : MonoBehaviour
         RaycastHit hitData;
         if (Physics.Raycast(ray, out hitData))
         {
-            Debug.Log(hitData.transform.gameObject.name);
             _renderer.sharedMaterial = hitData.transform.GetComponent<Renderer>().material;
+            if (hitData.transform.GetComponent<AnswerPlate>())
+                _materialID = hitData.transform.GetComponent<AnswerPlate>()._answerID;
+            else
+                _materialID = -1;
+
+            Debug.Log(_materialID);
         }
     }
 }

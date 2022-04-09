@@ -11,14 +11,14 @@ public class Dialogue : MonoBehaviour
     private TextMeshPro _textMesh;
 
     [SerializeField]
-    private string[] _lines;
+    private DialoguePhase[] _dialoguePhase;
+    public int _phaseIndex;
     [SerializeField] private float _textSpeed;
 
     public UnityEvent OnDialogueEndEvent;
 
     private int _i;
 
-    // Start is called before the first frame update
     void Start()
     {
         if (_dialogueBubble.GetComponentInChildren<TextMeshPro>())
@@ -40,7 +40,7 @@ public class Dialogue : MonoBehaviour
 
     IEnumerator WriteLine()
     {
-        foreach (char c in _lines[_i].ToCharArray())
+        foreach (char c in _dialoguePhase[_phaseIndex]._lines[_i].ToCharArray())
         {
             _textMesh.text += c;
             yield return new WaitForSeconds(_textSpeed);
@@ -50,18 +50,18 @@ public class Dialogue : MonoBehaviour
 
     public void GetNextLine()
     {
-        if (_textMesh.text == _lines[_i])
+        if (_textMesh.text == _dialoguePhase[_phaseIndex]._lines[_i])
             NextLine();
         else
         {
             StopAllCoroutines();
-            _textMesh.text = _lines[_i];
+            _textMesh.text = _dialoguePhase[_phaseIndex]._lines[_i];
         }
     }
 
     void NextLine()
     {
-        if (_i < _lines.Length - 1)
+        if (_i < _dialoguePhase[_phaseIndex]._lines.Length - 1)
         {
             _i++;
             _textMesh.text = string.Empty;
@@ -74,9 +74,9 @@ public class Dialogue : MonoBehaviour
         }
     }
 
-
     public void OnDialogueEnd()
     {
+        _phaseIndex++;
         OnDialogueEndEvent.Invoke();
     }
 }
