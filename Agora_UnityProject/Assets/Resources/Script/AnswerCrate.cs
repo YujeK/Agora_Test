@@ -22,8 +22,7 @@ public class AnswerCrate : MonoBehaviour
         {
             Debug.Log("Magic Crate in");
             if (other.GetComponent<MaterialSwap>()._materialID == _answer)
-                Debug.Log("UnTriggerStair");
-            //_answer = -1;
+                _stairsRiddle.UnTriggerStair(_answer, _duration);
         }
     }
 
@@ -33,7 +32,6 @@ public class AnswerCrate : MonoBehaviour
         {
             if (other.GetComponent<MaterialSwap>()._materialID == _answer)
                 _stairsRiddle.TriggerStair(_answer, _endValue, _duration);
-            // _answer = 
         }
     }
 }

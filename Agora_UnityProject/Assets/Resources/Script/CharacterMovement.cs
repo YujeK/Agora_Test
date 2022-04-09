@@ -8,6 +8,8 @@ public class CharacterMovement : MonoBehaviour
     private Animator _animator;
     [SerializeField] private Transform _groundCheck;
 
+    public bool _pickingUp;
+
     private CharacterController _controller;
 
     private bool _isGrounded;

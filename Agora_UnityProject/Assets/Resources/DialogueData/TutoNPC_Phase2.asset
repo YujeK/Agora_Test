@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: TutoNPC_Phase2
   m_EditorClassIdentifier: 
   _lines:
-  - "Merci d'avoir jou\xE9 \xE0 mon mini-jeu, \xE0 la prochaine !"
+  - "Merci d'avoir effectu\xE9 ce test technique, \xE0 la prochaine !"
