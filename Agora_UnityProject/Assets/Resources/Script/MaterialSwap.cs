@@ -7,6 +7,7 @@ public class MaterialSwap : MonoBehaviour
     [SerializeField] private Material[] _material;
 
     private Renderer _renderer;
+
     private int _i;
 
     private void Start()
@@ -22,5 +23,17 @@ public class MaterialSwap : MonoBehaviour
         if (_i >= _material.Length)
             _i = 0;
         _renderer.sharedMaterial = _material[_i];
+    }
+
+    public void GetMaterialUnder()
+    {
+        Ray ray = new Ray(transform.position, -transform.up);
+        Debug.DrawRay(transform.position, -transform.up);
+        RaycastHit hitData;
+        if (Physics.Raycast(ray, out hitData))
+        {
+            Debug.Log(hitData.transform.gameObject.name);
+            _renderer.sharedMaterial = hitData.transform.GetComponent<Renderer>().material;
+        }
     }
 }

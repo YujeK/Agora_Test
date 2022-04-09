@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class Dialogue : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class Dialogue : MonoBehaviour
     [SerializeField]
     private string[] _lines;
     [SerializeField] private float _textSpeed;
+
+    public UnityEvent OnDialogueEndEvent;
 
     private int _i;
 
@@ -66,7 +69,14 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
+            OnDialogueEnd();
             _i = 0;
         }
+    }
+
+
+    public void OnDialogueEnd()
+    {
+        OnDialogueEndEvent.Invoke();
     }
 }
