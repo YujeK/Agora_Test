@@ -32,6 +32,7 @@ public class StairsRiddle : MonoBehaviour
 
     public void UnTriggerStair(int id, float duration)
     {
+        Debug.Log("Untrigger");
         _stairs[id].transform.DOMoveY(_startValue[id], duration);
     }
 }

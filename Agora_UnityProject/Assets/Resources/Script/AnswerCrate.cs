@@ -20,9 +20,7 @@ public class AnswerCrate : MonoBehaviour
     {
         if (other.tag == "MagicCrate")
         {
-            Debug.Log("Magic Crate in");
-            if (other.GetComponent<MaterialSwap>()._materialID == _answer)
-                _stairsRiddle.UnTriggerStair(_answer, _duration);
+            _stairsRiddle.UnTriggerStair(_answer, _duration);
         }
     }
 
