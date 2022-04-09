@@ -3615,6 +3615,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceMagnitude: 2
+--- !u!4 &80250936 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4754828841154550863, guid: e6753df84a02c4e4ca183415f2e1bbee, type: 3}
+  m_PrefabInstance: {fileID: 116506945}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &80679235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19073,6 +19078,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4217630959725582, guid: 5e5b016a0cd771740aae0b664476d77d, type: 3}
   m_PrefabInstance: {fileID: 499237798}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &503069334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 503069335}
+  m_Layer: 0
+  m_Name: PickUpTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &503069335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503069334}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.104, z: 0.889}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 80250936}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &503973010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38185,7 +38220,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: -170.71979}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -73640,21 +73675,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5011365844255736745, guid: ad66198f2247bc9499305d069152f10f, type: 3}
-      propertyPath: m_Mass
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5011365844255736745, guid: ad66198f2247bc9499305d069152f10f, type: 3}
-      propertyPath: m_Constraints
-      value: 112
-      objectReference: {fileID: 0}
     - target: {fileID: 5011722948730745510, guid: ad66198f2247bc9499305d069152f10f, type: 3}
       propertyPath: m_Name
       value: MagicCrate
-      objectReference: {fileID: 0}
-    - target: {fileID: 5011722948730745510, guid: ad66198f2247bc9499305d069152f10f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5015774280495273160, guid: ad66198f2247bc9499305d069152f10f, type: 3}
       propertyPath: m_RootOrder
@@ -73722,21 +73745,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 883329006802576936, guid: 34bdcfd5944412c4990cfb84d8148e98, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 884278334506617512, guid: 34bdcfd5944412c4990cfb84d8148e98, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 884295567421077782, guid: 34bdcfd5944412c4990cfb84d8148e98, type: 3}
       propertyPath: m_Name
       value: TutoNPC
-      objectReference: {fileID: 0}
-    - target: {fileID: 884853777890528506, guid: 34bdcfd5944412c4990cfb84d8148e98, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 887305832811782110, guid: 34bdcfd5944412c4990cfb84d8148e98, type: 3}
       propertyPath: m_RootOrder
@@ -73782,22 +73793,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5933872323423201650, guid: 34bdcfd5944412c4990cfb84d8148e98, type: 3}
-      propertyPath: _lines.Array.data[1]
-      value: Bienvenue dans ce test technique pour The Agora
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933872323423201650, guid: 34bdcfd5944412c4990cfb84d8148e98, type: 3}
-      propertyPath: _dialoguePhase.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933872323423201650, guid: 34bdcfd5944412c4990cfb84d8148e98, type: 3}
-      propertyPath: _dialoguePhase.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: c21fed0e3c7a05b4dbdc18dd14ed0f18, type: 2}
-    - target: {fileID: 5933872323423201650, guid: 34bdcfd5944412c4990cfb84d8148e98, type: 3}
-      propertyPath: _dialoguePhase.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 487906d3d6585b643b01eca41e7cea99, type: 2}
     - target: {fileID: 5933872323423201650, guid: 34bdcfd5944412c4990cfb84d8148e98, type: 3}
       propertyPath: OnDialogueEndEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

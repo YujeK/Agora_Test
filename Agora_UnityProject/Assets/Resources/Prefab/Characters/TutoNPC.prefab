@@ -1386,7 +1386,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &886712526775737286
 Transform:
   m_ObjectHideFlags: 0
@@ -1622,7 +1622,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884295567421077782}
-  m_LocalRotation: {x: -0, y: 0.74421316, z: -0, w: -0.6679423}
+  m_LocalRotation: {x: 0, y: 0.7442125, z: -0, w: -0.66794294}
   m_LocalPosition: {x: -27.43, y: -0.0000019073486, z: 17.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1670,11 +1670,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogueBubble: {fileID: 1654941327582270310}
-  _lines:
-  - Parler
-  - Bienvenue dans ce test technique
-  - "Vu que je m'ennuie je te propose de jouer \xE0 un jeu avec moi"
-  - On se retrouve en haut !
+  _dialoguePhase:
+  - {fileID: 11400000, guid: c21fed0e3c7a05b4dbdc18dd14ed0f18, type: 2}
+  - {fileID: 11400000, guid: 487906d3d6585b643b01eca41e7cea99, type: 2}
+  _phaseIndex: 0
   _textSpeed: 0.02
   OnDialogueEndEvent:
     m_PersistentCalls:
@@ -2207,7 +2206,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &886703222565657488
 Transform:
   m_ObjectHideFlags: 0
